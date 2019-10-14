@@ -13,8 +13,8 @@ export default class App extends Component {
       <div>
         <h1>Counter App</h1>
         <h2>{this.state.counter}</h2>
-        <button id="add">+</button>
-        <button id="subtract">-</button>
+        <button onClick={() => this.setState({counter: this.state.counter + 1})} id="add">+</button>
+        <button onClick={() => this.setState({ counter: this.state.counter - 1 })} id="subtract">-</button>
       </div>
     )
   }
