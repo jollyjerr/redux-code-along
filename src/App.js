@@ -8,7 +8,7 @@ function App(props){
     return (
       <div>
         <h1>Counter App</h1>
-        <h2>{this.state.counter}</h2>
+        <h2>{props.counter}</h2>
         <button onClick={() => props.add() } id="add">+</button>
         <button onClick={() => this.setState({ counter: this.state.counter - 1 })} id="subtract">-</button>
       </div>
