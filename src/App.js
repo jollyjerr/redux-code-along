@@ -10,7 +10,7 @@ function App(props){
         <h1>Counter App</h1>
         <h2>{props.counter}</h2>
         <button onClick={() => props.add() } id="add">+</button>
-        <button onClick={() => this.setState({ counter: this.state.counter - 1 })} id="subtract">-</button>
+        <button onClick={() => props.subtract() } id="subtract">-</button>
       </div>
     )
 }
@@ -23,7 +23,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    add: () => dispatch({type: 'ADD'})
+    add: () => dispatch({type: 'ADD'}),
+    subtract: () => dispatch({type: 'SUBTRACT'})
   }
 }
 
