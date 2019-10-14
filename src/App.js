@@ -3,7 +3,7 @@ import './App.css';
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
-function App(){
+function App(props){
 
     return (
       <div>
