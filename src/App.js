@@ -17,7 +17,7 @@ function App(props){
 
 const mapStateToProps = (state) => {
   return {
-    counter: state
+    counter: state.counter
   }
 }
 
