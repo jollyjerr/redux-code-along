@@ -1,3 +1,4 @@
 import {createStore} from 'redux'
+import {counter} from '../reducers/counter'
 
-export default createStore(() => {})
+export default createStore(counter)
