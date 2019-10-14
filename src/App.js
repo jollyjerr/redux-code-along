@@ -9,7 +9,7 @@ function App(props){
       <div>
         <h1>Counter App</h1>
         <h2>{this.state.counter}</h2>
-        <button onClick={() => props.dispatch({type: 'ADD'})} id="add">+</button>
+        <button onClick={() => props.add() } id="add">+</button>
         <button onClick={() => this.setState({ counter: this.state.counter - 1 })} id="subtract">-</button>
       </div>
     )
@@ -21,5 +21,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, null)(App); //null exists where map dispatch to props exists
+const mapDispatchToProps = (dispatch) => {
+  return {
+    add: () => dispatch({type: 'ADD'})
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App); 
 
