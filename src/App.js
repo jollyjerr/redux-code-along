@@ -15,5 +15,11 @@ function App(){
     )
 }
 
-export default connect(null, null)(App);
+const mapStateToProps = (state) => {
+  return {
+    counter: state
+  }
+}
+
+export default connect(mapStateToProps, null)(App); //null exists where map dispatch to props exists
 
