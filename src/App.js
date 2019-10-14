@@ -9,7 +9,7 @@ function App(){
       <div>
         <h1>Counter App</h1>
         <h2>{this.state.counter}</h2>
-        <button onClick={() => this.setState({counter: this.state.counter + 1})} id="add">+</button>
+        <button onClick={() => props.dispatch({type: 'ADD'})} id="add">+</button>
         <button onClick={() => this.setState({ counter: this.state.counter - 1 })} id="subtract">-</button>
       </div>
     )
